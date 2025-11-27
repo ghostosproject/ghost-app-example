@@ -19,7 +19,7 @@ jobs:
       
       - name: Build Go Plugins
         env:
-            GOOS: darwin
+            GOOS: linux
             GOARCH: amd64
             CGO_ENABLED: 1
         run: go build -buildmode=plugin -o my-app.so ./main.go
