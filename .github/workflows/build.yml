@@ -21,6 +21,7 @@ jobs:
         env:
             GOOS: darwin
             GOARCH: amd64
+            CGO_ENABLED: 1
         run: go build -buildmode=plugin -o my-app.so ./main.go
       
       - name: Upload binaries to release
